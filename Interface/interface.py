@@ -1,97 +1,71 @@
-import csv
+#Menu Interativo 
+def menu ()
+ while True:
+     print("\n === Menu Principal ===")
+     print(" 1. Cadastrar Aluno")
+     print(" 2. Cadastrar Diciplina")
+     print(" 3. Cadastrar Nota")
+     print(" 4. Exibir Dados")
+     print(" 5. Enviar para CSV")
+     print(" 6. Trazer de CSV")
+     print(" 0. Sair ")
+     opcao = input(" Escolha uma opção )
+if opcao == "1":
+                try:
+                    id_aluno = int(input("Id do aluno: "))
+                    nome = input("Nome do Aluno: ")
+                    cadastrar_aluno(id_aluno , nome)
+                    print("Aluno cadastrado com sucesso! ")
+                except:
+                    print ("Dados inválidos.")
+                    
+ elif opcao == "2":
+                try:
+                    id_disciplina = int(input("Id do diciplina: "))
+                    nome = input("Nome da Diciplina: ")
+                    cadastrar_diciplina(id_diciplina , nome)
+                    print("Diciplina cadastrada com sucesso! ")
+                except:
+                    print ("Dados inválidos.")
 
-#Primeira classe a ser criada
-class Aluno:
-    def __init__(self, id_aluno, nome):
-        self.id_aluno = id_aluno
-        self.nome = nome
+elif opcao == "2":
+                try:
+                    id_disciplina = int(input("Id da diciplina: "))
+                    nome = input("Nome da Diciplina: ")
+                    cadastrar_diciplina(id_diciplina , nome)
+                    print("Diciplina cadastrada com sucesso! ")
+                except:
+                    print ("Dados inválidos.")
 
-class Disciplina:
-    def __init__(self, id_disciplina, nome):
-        self.id_disciplina = id_disciplina
-        self.nome = nome
+elif opcao == "3":
+                try:
+                    id_aluno = int(input("Id do Aluno: "))
+                    id_disciplina = int(input("Id da Diciplina: "))
+                    valor = float(input("Nota: "))
+                    cadastrar_nota(id_aluno, id_diciplina , nota)
+                    print("Nota cadastrada com sucesso! ")
+                except:
+                    print ("Dados inválidos.")
 
-class Nota:
-    def __init__(self, id_aluno, id_disciplina, valor):
-        self.id_aluno = id_aluno
-        self.id_disciplina = id_disciplina
-        self.valor = valor
+elif opcao == "4":
+  exibir_dados()
+elif opcao == "5":
+enviar_csv()
+print("Dados enviados com sucesso!")
+elif opcao == "6":
+trazer_csv()
+print("Dados carregados com sucesso!")
+elif opcao == "0":
+print("Programa encerrado!")
+break
+else:
+print("Opção não encontrada. Tente novamente.")
 
-# Listas de dados
-alunos = []
-disciplinas = []
-notas = []
+if__name__ == "__main__":
+menu()
 
-# Funções de cadastro
-def cadastrar_aluno(id_aluno, nome):
-    alunos.append(Aluno(id_aluno, nome))
 
-def cadastrar_disciplina(id_disciplina, nome):
-    disciplinas.append(Disciplina(id_disciplina, nome))
 
-def cadastrar_nota(id_aluno, id_disciplina, valor):
-    notas.append(Nota(id_aluno, id_disciplina, valor))
-
-#Função para exportar o arquivo .csv
-
-def exportar_csv():
-    with open('alunos.csv', mode='w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(['id_aluno', 'nome'])
-        for aluno in alunos:
-            writer.writerow([aluno.id_aluno, aluno.nome])
-
-    with open('disciplinas.csv', mode='w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(['id_disciplina', 'nome'])
-        for disc in disciplinas:
-            writer.writerow([disc.id_disciplina, disc.nome])
-
-    with open('notas.csv', mode='w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(['id_aluno', 'id_disciplina', 'valor'])
-        for nota in notas:
-            writer.writerow([nota.id_aluno, nota.id_disciplina, nota.valor])
-
-#Função para importar um .csv
-
-def importar_csv():
-    alunos.clear()
-    disciplinas.clear()
-    notas.clear()
-
-    try:
-        with open('alunos.csv', mode='r') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                cadastrar_aluno(int(row['id_aluno']), row['nome'])
-
-        with open('disciplinas.csv', mode='r') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                cadastrar_disciplina(int(row['id_disciplina']), row['nome'])
-
-        with open('notas.csv', mode='r') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                cadastrar_nota(int(row['id_aluno']), int(row['id_disciplina']), float(row['valor']))
-    except FileNotFoundError:
-        print("Arquivos CSV não encontrados.")
-
-def exibir_dados():
-    print("\n--- Alunos ---")
-    for aluno in alunos:
-        print(f"{aluno.id_aluno} - {aluno.nome}")
-
-    print("\n--- Disciplinas ---")
-    for disc in disciplinas:
-        print(f"{disc.id_disciplina} - {disc.nome}")
-
-    print("\n--- Notas ---")
-    for nota in notas:
-        nome_aluno = next((a.nome for a in alunos if a.id_aluno == nota.id_aluno), "Desconhecido")
-        nome_disc = next((d.nome for d in disciplinas if d.id_disciplina == nota.id_disciplina), "Desconhecido")
-        print(f"{nome_aluno} - {nome_disc}: {nota.valor}")
 
 
 
