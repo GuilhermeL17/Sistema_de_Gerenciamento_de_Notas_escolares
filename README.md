@@ -1,4 +1,3 @@
-
 ## **Briefing do Projeto: Sistema de Gerenciamento de Notas Escolares**
 
 ---
@@ -71,7 +70,6 @@ Desenvolver um sistema simples em Python que permita o **cadastro, organização
 
 * O sistema deve ser executável sem necessidade de bibliotecas externas.
 * Cada integrante foi responsável por um módulo específico.
-* A interface deve ser apenas textual (via terminal).
 * O tempo de execução deve ser rápido mesmo com até centenas de registros (uso de ordenação eficiente quando necessário).
 
 
