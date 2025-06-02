@@ -1,14 +1,78 @@
-# Descrição do Projeto: Sistema de Gerenciamento de Notas Escolares
-Este projeto tem como objetivo desenvolver um Sistema de Gerenciamento de Notas Escolares eficiente, que utilize algoritmos de ordenação e busca para otimizar o acesso e a análise das informações acadêmicas dos alunos. O sistema será capaz de armazenar, organizar e consultar as notas de alunos de maneira dinâmica, permitindo uma visualização clara do desempenho individual e coletivo em diferentes disciplinas.
 
-A aplicação possibilitará que professores e administradores escolares realizem consultas rápidas por nome de aluno, disciplina ou faixa de notas. Além disso, os dados poderão ser ordenados de forma personalizada (por nome, nota ou disciplina), facilitando a construção de rankings, o acompanhamento do progresso acadêmico e a identificação de padrões de desempenho.
+## **Briefing do Projeto: Sistema de Gerenciamento de Notas Escolares**
 
-A combinação entre algoritmos de ordenação (como Bubble Sort, Merge Sort ou Quick Sort) e algoritmos de busca (como busca sequencial ou busca binária) proporcionará maior eficiência nas operações do sistema, reduzindo o tempo necessário para localizar e organizar informações. Por exemplo, ao ordenar previamente os alunos por nome, a busca binária poderá ser aplicada, acelerando significativamente a localização de registros.
+---
+
+### **Objetivo Geral**
+
+Desenvolver um sistema simples em Python que permita o **cadastro, organização, busca e análise de notas escolares** de alunos, visando facilitar o trabalho de professores e administradores no acompanhamento do desempenho acadêmico.
+
+---
+
+### **Escopo do Projeto**
+
+**Inclui:**
+
+* Cadastro de alunos com nome, disciplina e nota.
+* Visualização e listagem de todos os cadastros.
+* Ordenação dos dados por nome, disciplina e nota (crescente e decrescente).
+* Busca por nome do aluno, disciplina e faixa de notas.
+* Interface de linha de comando (CLI) para interação com o usuário.
+* Estrutura modular dividida em 5 arquivos para facilitar o trabalho em equipe.
+* Testes básicos de validação das principais funcionalidades.
+
+---
+
+### **Funcionalidades Esperadas**
+
+1. **Cadastro de Alunos**
+
+   * Inserção de nome, disciplina e nota.
+   * Armazenamento em estrutura de dados (lista de dicionários).
+
+2. **Listagem de Dados**
+
+   * Exibição de todos os alunos cadastrados.
+
+3. **Ordenação**
+
+   * Por nome (ordem alfabética).
+   * Por disciplina.
+   * Por nota (crescente e decrescente).
+
+4. **Busca**
+
+   * Busca por nome exato do aluno.
+   * Busca por disciplina.
+   * Busca por intervalo de notas (ex: alunos com notas entre 7 e 10).
+
+5. **Interface com o Usuário**
+
+   * Menu interativo no terminal com as opções acima.
+
+6. **Testes**
+
+   * Validação de ordenações e buscas com exemplos simples.
+
+---
+
+### **Necessidades Técnicas**
+
+* Linguagem: **Python**
+* Organização modular em arquivos:
+* `dados.py`, `ordenacao.py`, `busca.py`, `interface.py`, `main.py`
+* Boa prática de código: nomes claros, comentários, modularização
+* Integração entre as partes desenvolvidas por diferentes membros da equipe
 
 
-## Módulos:
-- **dados.py**: Armazena e cadastra alunos.
-- **ordenacao.py**: Contém funções para ordenar por nome, disciplina ou nota.
-- **busca.py**: Realiza buscas por nome, disciplina e faixa de nota.
-- **interface.py**: Menu de interação com o usuário.
-- **main.py**: Arquivo principal de execução.
+---
+
+### **Restrições**
+
+* O sistema deve ser executável sem necessidade de bibliotecas externas.
+* Cada integrante foi responsável por um módulo específico.
+* A interface deve ser apenas textual (via terminal).
+* O tempo de execução deve ser rápido mesmo com até centenas de registros (uso de ordenação eficiente quando necessário).
+
+
+
