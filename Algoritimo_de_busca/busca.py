@@ -1,5 +1,5 @@
 def busca_sequencial(lista, valor):
-    for indice, elemento in enumerate(lista):
+    for indice, elemento in enumerate(lista): #permite percorrer a lista tendo acesso ao índice
         if elemento == valor:
             return indice  # Retorna o índice onde encontrou
     return -1  # Retorna -1 se não encontrou
