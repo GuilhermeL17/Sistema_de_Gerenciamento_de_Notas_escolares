@@ -86,13 +86,4 @@ Desenvolver um sistema simples em Python que permita o **cadastro, organização
 * Cada integrante foi responsável por um módulo específico.
 * O tempo de execução deve ser rápido mesmo com até centenas de registros (uso de ordenação eficiente quando necessário).
 
-### **Integrantes**
-Guilherme Lacerda Ricardo
 
-Davi Sobral Cavalcante Lacerda
-
-Cauã Eduardo Silva de Carvalho Mendes
-
-Maira Priscila Faustino Dias Chaves
-
-Jéssica Soares Dias
