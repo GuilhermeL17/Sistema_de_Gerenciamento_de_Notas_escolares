@@ -1,13 +1,13 @@
 ### **Integrantes**
-Guilherme Lacerda Ricardo
+Guilherme Lacerda Ricardo - RGM:38878577
 
-Davi Sobral Cavalcante Lacerda
+Davi Sobral Cavalcante Lacerda - RGM:38708761
 
-Cauã Eduardo Silva de Carvalho Mendes
+Cauã Eduardo Silva de Carvalho Mendes - RGM: 36923303
 
-Maira Priscila Faustino Dias Chaves
+Maira Priscila Faustino Dias Chaves - RGM: 38721503
 
-Jéssica Soares Dias
+Jéssica Soares Dias - RGM: 37885715
 
 
 ---
