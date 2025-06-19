@@ -1,13 +1,11 @@
 ### **Integrantes**
 Guilherme Lacerda Ricardo
-
 Davi Sobral Cavalcante Lacerda
-
 Cauã Eduardo Silva de Carvalho Mendes
-
 Maira Priscila Faustino Dias Chaves
-
 Jéssica Soares Dias
+
+
 ---
 
 ## **Briefing do Projeto: Sistema de Gerenciamento de Notas Escolares**
